@@ -5,10 +5,10 @@
 
 // Your names
 const HER_NAME = "Naomi";
-const YOUR_NAME = "Your Name";  // ← change this
+const YOUR_NAME = "Abel";
 
 // The date you started dating (shown on the cover photo)
-const RELATIONSHIP_START = "January 14, 2024";  // ← change this
+const RELATIONSHIP_START = "April 4, 2026";
 
 // ─────────────────────────────────────────────
 //  MEMORIES
@@ -18,45 +18,38 @@ const RELATIONSHIP_START = "January 14, 2024";  // ← change this
 const MEMORIES = [
   {
     photo: "memory-01.jpg",
-    date: "January 14, 2024",                          // ← your date
-    caption: "The night everything changed",           // ← short caption (handwritten style)
-    body: "There's a version of that evening I replay sometimes. The way you laughed. The way time felt slower than it should have. I knew then — even if I didn't say it — that everything was different now.",  // ← your memory
+    date: "April 4, 2026",
+    caption: "your hand in mine",
+    body: "Something about this one. No big occasion. Just us in the car, your hand in mine, the world outside not mattering at all. I didn't want to let go. I still don't.",
     position: "left"
   },
   {
     photo: "memory-02.jpg",
-    date: "February 14, 2024",
-    caption: "You laughed so hard you cried",
-    body: "I don't even remember what set it off. But I remember the sound of you laughing. And I remember thinking: I want to spend the rest of my life making you make that sound.",
+    date: "You sent me this",
+    caption: "even like this, you got me",
+    body: "You probably sent this without thinking twice. I've looked at it more times than I'd ever admit. There's something about the way you look when you're just being you — no performance, no filter. That's the version of you I'm most in love with.",
     position: "right"
   },
   {
     photo: "memory-03.jpg",
-    date: "March 3, 2024",
-    caption: "Just the two of us",
-    body: "There are big moments and small moments. This one was small. But I've thought about it more than almost anything else. Just you. Just us. Just this.",
+    date: "You sent me this",
+    caption: "honestly unfair",
+    body: "You can't just send something like this and expect me to act normal. The way you look here — I genuinely don't know what to do with myself. You're stunning, Naomi. I hope you know that.",
     position: "left"
   },
   {
     photo: "memory-04.jpg",
-    date: "April 20, 2024",
-    caption: "I couldn't stop smiling",
-    body: "You probably didn't even notice. But I was watching you when you weren't looking, and I couldn't stop smiling. I still can't explain it. I don't think I need to.",
+    date: "You sent me this",
+    caption: "I have this one saved",
+    body: "This is one of my favourites. Something about the way you carry yourself — the confidence, the calm. You don't even have to try. You just are, and that's enough to stop me completely.",
     position: "right"
   },
   {
     photo: "memory-05.jpg",
-    date: "June 1, 2024",
-    caption: "My favourite day",
-    body: "If I could live one day over and over, it might be this one. Not because anything extraordinary happened. But because you were there, and that was enough.",
+    date: "You sent me this",
+    caption: "I could look at this forever",
+    body: "You, in the mirror, not even really trying — and somehow the most beautiful thing I've seen all day. I keep coming back to this one. I don't think that's ever going to change.",
     position: "left"
-  },
-  {
-    photo: "memory-06.jpg",
-    date: "September 15, 2024",
-    caption: "Still going",
-    body: "Every time I think I've figured out how much I love you, you do something new. And I have to start counting all over again.",
-    position: "right"
   },
 ];
 
@@ -66,13 +59,13 @@ const MEMORIES = [
 //  Keep them short. Be specific. Specific is romantic.
 // ─────────────────────────────────────────────
 const LOVE_REASONS = [
-  "The way you laugh before the punchline.",
-  "How you make every room feel like home.",
-  "The face you make when you're concentrating.",
-  "That you always know when I need silence.",
-  "The way you say my name.",
-  "How you love the people you love — completely.",
-  "That you chose me. Every day. You choose me.",
+  "The way you look when you don't know I'm watching.",
+  "How you make even ordinary days feel like something.",
+  "That you send me photos just because.",
+  "The way your hand fits in mine.",
+  "How you're beautiful without even trying.",
+  "That you're mine. Still can't believe that.",
+  "Everything. Honestly, everything.",
 ];
 
 // ─────────────────────────────────────────────
@@ -80,11 +73,10 @@ const LOVE_REASONS = [
 //  The moments that mark your story.
 // ─────────────────────────────────────────────
 const SPECIAL_DATES = [
-  { date: "January 14, 2024",   label: "The day we met" },
-  { date: "February 14, 2024",  label: "Our first Valentine's" },
-  { date: "March 3, 2024",      label: "The night I knew" },
-  { date: "June 1, 2024",       label: "My favourite day with you" },
-  { date: "Today",              label: "Still going" },
+  { date: "April 4, 2026",  label: "The day we met — the very first time" },
+  { date: "April 4, 2026",  label: "Your hand in mine in the car" },
+  { date: "April 5, 2026",  label: "The day I made this for you" },
+  { date: "Today",          label: "Already, I don't want to stop." },
 ];
 
 // ─────────────────────────────────────────────
@@ -93,12 +85,16 @@ const SPECIAL_DATES = [
 //  Write it like no one else will see it.
 //  (Because no one else will.)
 // ─────────────────────────────────────────────
-const FINAL_MESSAGE = `I made this because words in a text feel too small.
-Because you deserve something that takes up space.
+const FINAL_MESSAGE = `We met yesterday.
+Just yesterday.
 
-You are the best thing that has happened to me.
-Not in a way I can explain to anyone else.
-In a way that's just ours.
+And already I'm building things for you.
 
-I love you, Naomi.
-More than this page can hold.`;
+You held my hand in that car
+and I don't think I've come back down since.
+
+I don't know what this is yet.
+But I know I don't want it to stop.
+
+Naomi.
+I'm really glad I met you.`;
