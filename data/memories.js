@@ -5,10 +5,10 @@
 
 // Your names
 const HER_NAME = "Naomi";
-const YOUR_NAME = "Your Name";  // ← change this
+const YOUR_NAME = "Abel";
 
 // The date you started dating (shown on the cover photo)
-const RELATIONSHIP_START = "January 14, 2024";  // ← change this
+const RELATIONSHIP_START = "April 4, 2026";
 
 // ─────────────────────────────────────────────
 //  MEMORIES
@@ -18,7 +18,7 @@ const RELATIONSHIP_START = "January 14, 2024";  // ← change this
 const MEMORIES = [
   {
     photo: "memory-01.jpg",
-    date: "Yesterday",
+    date: "April 4, 2026",
     caption: "your hand in mine",
     body: "Something about this one. No big occasion. Just us in the car, your hand in mine, the world outside not mattering at all. I didn't want to let go. I still don't.",
     position: "left"
@@ -73,10 +73,10 @@ const LOVE_REASONS = [
 //  The moments that mark your story.
 // ─────────────────────────────────────────────
 const SPECIAL_DATES = [
-  { date: "The day we met",         label: "Everything started here" },
-  { date: "The first time I knew",  label: "I didn't say it out loud yet" },
-  { date: "Yesterday",              label: "Your hand in mine in the car" },
-  { date: "Today",                  label: "Still here. Still choosing you." },
+  { date: "April 4, 2026",  label: "The day we met — the very first time" },
+  { date: "April 4, 2026",  label: "Your hand in mine in the car" },
+  { date: "April 5, 2026",  label: "The day I made this for you" },
+  { date: "Today",          label: "Already, I don't want to stop." },
 ];
 
 // ─────────────────────────────────────────────
@@ -85,15 +85,16 @@ const SPECIAL_DATES = [
 //  Write it like no one else will see it.
 //  (Because no one else will.)
 // ─────────────────────────────────────────────
-const FINAL_MESSAGE = `I made this because a text wasn't enough.
-Because you deserve something that actually takes up space.
+const FINAL_MESSAGE = `We met yesterday.
+Just yesterday.
 
-You send me photos just because.
-You held my hand yesterday like it was nothing.
-But it wasn't nothing to me.
+And already I'm building things for you.
 
-None of it is nothing to me.
+You held my hand in that car
+and I don't think I've come back down since.
 
-I love you, Naomi.
-More than I know how to say.
-So I built this instead.`;
+I don't know what this is yet.
+But I know I don't want it to stop.
+
+Naomi.
+I'm really glad I met you.`;
