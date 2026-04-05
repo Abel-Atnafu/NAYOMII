@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>For Naomi</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Caveat:wght@400;600&family=Inter:wght@300;400&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/animations.css" />
+  <link rel="stylesheet" href="assets/css/sections.css" />
+</head>
+<body>
+
+  <!-- Ambient canvas (particles) -->
+  <canvas id="particles-canvas" aria-hidden="true"></canvas>
+
+  <!-- Film grain overlay -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- Optional music -->
+  <button id="unmute-btn" aria-label="Toggle music" title="Toggle music">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+      <path d="M9 18V5l12-2v13" />
+      <circle cx="6" cy="18" r="3" />
+      <circle cx="18" cy="16" r="3" />
+    </svg>
+  </button>
+
+  <!-- ─────────────────────────────────────────── -->
+  <!--  SECTION 0 — Deception Screen              -->
+  <!-- ─────────────────────────────────────────── -->
+  <section id="deception" class="fullscreen" aria-hidden="true">
+    <div id="terminal-text"></div>
+    <span id="cursor" aria-hidden="true">_</span>
+  </section>
+
+  <!-- ─────────────────────────────────────────── -->
+  <!--  SECTION 1 — Title Card                    -->
+  <!-- ─────────────────────────────────────────── -->
+  <section id="title-card" class="fullscreen hidden">
+    <div class="title-inner">
+      <h1 id="title-name">NAOMI</h1>
+      <div class="title-divider"></div>
+      <p class="title-subtitle">a love letter</p>
+    </div>
+    <p class="press-hint">press anywhere to begin</p>
+  </section>
+
+  <!-- ─────────────────────────────────────────── -->
+  <!--  SECTION 2 — Cover / Overture              -->
+  <!-- ─────────────────────────────────────────── -->
+  <section id="overture" class="fullscreen hidden">
+    <div id="cover-wrap">
+      <img id="cover-image" src="photos/cover.jpg" alt="Cover photo" loading="eager" />
+      <div class="cover-overlay"></div>
+      <div class="cover-text">
+        <p id="cover-date" class="cover-date-label"></p>
+        <p class="cover-sub">scroll to begin</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────── -->
+  <!--  SECTION 3–N — Memory Chapters (JS built)  -->
+  <!-- ─────────────────────────────────────────── -->
+  <main id="memories-container" aria-label="Our memories"></main>
+
+  <!-- ─────────────────────────────────────────── -->
+  <!--  SECTION N+1 — Why I Love You              -->
+  <!-- ─────────────────────────────────────────── -->
+  <section id="love-list" class="fullscreen-scroll">
+    <div class="love-list-inner">
+      <h2 class="section-eyebrow animate-on-scroll">why I love you</h2>
+      <ul id="love-reasons" aria-label="Reasons I love you"></ul>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────── -->
+  <!--  SECTION N+2 — Special Dates Timeline      -->
+  <!-- ─────────────────────────────────────────── -->
+  <section id="timeline" class="fullscreen-scroll">
+    <div class="timeline-inner">
+      <h2 class="section-eyebrow animate-on-scroll">our story, so far</h2>
+      <div class="filmstrip-rail" aria-hidden="true"></div>
+      <ol id="timeline-list" aria-label="Our timeline"></ol>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────── -->
+  <!--  SECTION N+3 — Photo Mosaic                -->
+  <!-- ─────────────────────────────────────────── -->
+  <section id="mosaic">
+    <h2 class="section-eyebrow animate-on-scroll mosaic-eyebrow">us</h2>
+    <div id="mosaic-grid" aria-label="Photo mosaic"></div>
+  </section>
+
+  <!-- ─────────────────────────────────────────── -->
+  <!--  SECTION N+4 — Final Message               -->
+  <!-- ─────────────────────────────────────────── -->
+  <section id="finale" class="fullscreen">
+    <div class="finale-inner">
+      <p id="final-message" class="final-message"></p>
+      <p id="final-name" class="final-name"></p>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────────── -->
+  <!--  SECTION N+5 — Coda                        -->
+  <!-- ─────────────────────────────────────────── -->
+  <footer id="coda">
+    <div class="coda-dots" aria-hidden="true">
+      <span class="dot dot-a"></span>
+      <span class="dot dot-b"></span>
+    </div>
+    <p id="coda-names" class="coda-names"></p>
+    <p id="coda-date" class="coda-date"></p>
+  </footer>
+
+  <!-- Data -->
+  <script src="data/memories.js"></script>
+
+  <!-- Modules -->
+  <script src="assets/js/particles.js"></script>
+  <script src="assets/js/cinema.js"></script>
+  <script src="assets/js/memories.js"></script>
+  <script src="assets/js/main.js"></script>
+
+</body>
+</html>
