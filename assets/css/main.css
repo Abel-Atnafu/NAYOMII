@@ -1,0 +1,187 @@
+/* ============================================================
+   MAIN.CSS — Variables, reset, base layout, typography
+   ============================================================ */
+
+/* ── Custom properties ─────────────────────────────────────── */
+:root {
+  --black:        #080707;
+  --black-warm:   #0f0c0a;
+  --cream:        #f5e6c8;
+  --gold:         #c9a96e;
+  --gold-bright:  #e8c97e;
+  --rose:         #d4736a;
+  --rose-muted:   #8c4a47;
+  --white:        #faf7f2;
+  --overlay:      rgba(8, 7, 7, 0.65);
+
+  --font-serif:       'Cormorant Garamond', Georgia, serif;
+  --font-hand:        'Caveat', cursive;
+  --font-sans:        'Inter', system-ui, sans-serif;
+
+  --text-xs:    0.75rem;
+  --text-sm:    0.875rem;
+  --text-base:  1rem;
+  --text-lg:    1.25rem;
+  --text-xl:    1.5rem;
+  --text-2xl:   2rem;
+  --text-hero:  clamp(5rem, 18vw, 14rem);
+
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-expo:  cubic-bezier(0.7, 0, 0.84, 0);
+}
+
+/* ── Reset ─────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--black);
+  color: var(--cream);
+  font-family: var(--font-serif);
+  font-size: var(--text-base);
+  line-height: 1.7;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+/* ── Particles canvas ──────────────────────────────────────── */
+#particles-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  will-change: transform;
+}
+
+/* ── Film grain overlay ────────────────────────────────────── */
+.grain-overlay {
+  position: fixed;
+  inset: -50%;
+  width: 200%;
+  height: 200%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+  background-size: 256px 256px;
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 1000;
+  animation: grain 0.4s steps(1) infinite;
+}
+
+/* ── Music button ──────────────────────────────────────────── */
+#unmute-btn {
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: transparent;
+  border: 1px solid rgba(201, 169, 110, 0.35);
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 500;
+  opacity: 0;
+  transition: opacity 0.5s ease, border-color 0.3s ease;
+  padding: 0.5rem;
+}
+
+#unmute-btn svg {
+  width: 1rem;
+  height: 1rem;
+  color: var(--gold);
+}
+
+#unmute-btn:hover {
+  border-color: var(--gold);
+}
+
+#unmute-btn.visible {
+  opacity: 1;
+}
+
+/* ── Layout helpers ────────────────────────────────────────── */
+.fullscreen {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.fullscreen-scroll {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  padding: 10vh 2rem;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* ── Shared animate-on-scroll ──────────────────────────────── */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.9s var(--ease-out-expo), transform 0.9s var(--ease-out-expo);
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Section eyebrow label ─────────────────────────────────── */
+.section-eyebrow {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  font-weight: 300;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 3rem;
+}
+
+/* ── Gold shimmer text ─────────────────────────────────────── */
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--gold)        0%,
+    var(--gold-bright) 45%,
+    var(--gold)        55%,
+    var(--gold)        100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 3.5s linear infinite;
+}
